@@ -1,0 +1,9 @@
+import requests, bs4   
+s = requests.Session()
+url = 'https://www.facebook.com/login'
+
+res = s.get(url, auth = ('phannhatpm@yahoo.com.vn', '18021995'))
+form_data = {'email': 'phannhatpm@yahoo.com.vn',
+             'pass' : '18021995'
+            }
+s.post(url, data=form_data)
